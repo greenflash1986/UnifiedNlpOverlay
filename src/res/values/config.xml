@@ -5,9 +5,16 @@
         <item>com.android.location.fused</item>
         <item>org.microg.nlp</item>
     </string-array>
-	
-    <!--<bool name="config_enableNetworkLocationOverlay">false</bool>
-	
-    <dimen name="navigation_bar_height">96.0dip</dimen>
-    <dimen name="navigation_bar_height_landscape">96.0dip</dimen>-->
+
+    <bool name="config_enableNetworkLocationOverlay">false</bool>
+    <string name="config_networkLocationProviderPackageName">org.microg.nlp</string>
+
+    <bool name="config_enableGeocoderOverlay">false</bool>
+    <string name="config_geocoderProviderPackageName">org.microg.nlp</string>
+
+<!--
+    <string name="config_hardwareFlpPackageName">org.microg.nlp</string>
+    <string name="config_fusedLocationProviderPackageName">org.microg.nlp</string>
+    <string name="config_defaultNetworkRecommendationProviderPackage">org.microg.nlp</string>
+-->
 </resources>
