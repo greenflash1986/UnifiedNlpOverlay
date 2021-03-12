@@ -32,3 +32,28 @@ android {
         applicationId group
     }
 }
+
+task installInVendorDebug {
+    group 'install'
+    doLast {
+        exec {
+            commandLine 'adb', 'root'
+        }
+        exec {
+            commandLine 'adb', 'remount'
+        }
+    }
+}
+
+//def assembleDebug = tasks.register('assembleDebug')
+task getOutputs(type: DefaultTask) {
+    dependsOn 'assembleDebug'
+    //from = { assembleDebug.get().getOutputs() }
+    from {
+        from assembleDebug.outputs
+    }
+    into project.rootDir
+    doFirst {
+        println "bla"
+    }
+}
