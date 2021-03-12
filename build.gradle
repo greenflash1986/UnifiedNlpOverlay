@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        google() // For Gradle 4.0+
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.0'
+    }
+}
+
+allprojects {
+    apply plugin: 'idea'
+
+    group 'org.microg.nlp'
+
+    repositories {
+        google() // For Gradle 4.0+
+        mavenCentral()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'signing'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId group
+    }
+}
