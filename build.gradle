@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: 2021, Greenflash1986 aka Samuel
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 buildscript {
     repositories {
         google() // For Gradle 4.0+
