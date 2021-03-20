@@ -13,7 +13,7 @@ buildscript {
 allprojects {
     apply plugin: 'idea'
 
-    group 'org.microg.nlp'
+    group 'com.github.greenflash1986'
 
     repositories {
         google() // For Gradle 4.0+
@@ -29,6 +29,6 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId group
+        applicationId "${group}.${project.name.toLowerCase()}"
     }
 }
