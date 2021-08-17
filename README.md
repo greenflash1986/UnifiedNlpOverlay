@@ -9,14 +9,14 @@ A package for using [UnifiedNlp](https://github.com/microg/UnifiedNlp) together 
 forces org.microg.nlp-package as LocationProvider. If it's installed you can not use the GAPPS
 LocationProvider anymore. And you still have to place UnifiedNlp on system partition to get it to work.
 
-## Current state
+## Current development state
 
 Tested with Android 9 - Pie.
 
-Currently there are no signed packages or something like that. Feel free to contact me, if you need them.
+At this time there is one release but not as a signed package. As you aren't installing it with a package manager there shouldn't be any need for that, but feel free to contact me, if you need them.
 
+## Installation instructions
 
-## Instructions
 1. download UnifiedOverlay.apk and org.microg.nlp.xml
 1. get write access to system-partition: _adb root && adb remount_
 1. place UnifiedNlpOverlay.apk from [Releases](https://github.com/greenflash1986/UnifiedNlpOverlay/releases) into /system/vendor/overlay
@@ -26,7 +26,7 @@ Currently there are no signed packages or something like that. Feel free to cont
 1. download and install UnifiedNlp.apk from [F-Droid](https://f-droid.org/de/packages/org.microg.nlp/)
     * _adb push <APK-Name> /system/priv-app/UnifiedNlp/UnifiedNlp.apk_
 	
-## Background
+## Background for this project
 
 UnifiedNlp offers three different versions with different package names (Legacy-version, _com.google.android.gms_, _org.microg.nlp_).
 On ROMs without Gapps it's possible to use the version with _com.google.android.gms_ because  there will be no conflicts.
@@ -40,7 +40,9 @@ disable the "list of allowed location providers" and tell Android to only use _o
 PS: Because of the "system-partition"-thing you have to use either a ROM with the provided patch from UnifiedNlp 
 or install UnifiedNlp in the system-partition.
 
-This overlay enables the use of UnifiedNlp as 
+## Build instructions
+
+The build was tested with Gradle 6.5.1 but should also work with older versions. Afaik there are no special commands used. To build this project simply run `gradle build` in the root folder. The result will be in `.\build\outputs\apk\release`.
 
 ## Licence
 
