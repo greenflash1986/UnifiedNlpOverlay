@@ -19,7 +19,7 @@ Currently there are no signed packages or something like that. Feel free to cont
 ## Instructions
 1. download UnifiedOverlay.apk and org.microg.nlp.xml
 1. get write access to system-partition: _adb root && adb remount_
-1. place UnifiedNlpOverlay.apk into /system/vendor/overlay
+1. place UnifiedNlpOverlay.apk from [Releases](https://github.com/greenflash1986/UnifiedNlpOverlay/releases) into /system/vendor/overlay
     * adb push UnifiedNlpOverlay.apk /vendor/overlay/UnifiedNlpOverlay.apk
 1. place org.microg.nlp.xml into /etc/permissions
     * _adb push org.microg.nlp.xml /etc/permissions_ (if this does not work try to push to _/system/etc/..._)
